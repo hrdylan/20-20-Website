@@ -1,0 +1,120 @@
+body,html{
+	width:100%;
+	height: 100%;
+	background-color: black;
+	font-family: 'Libre Franklin', sans-serif;
+
+}
+
+
+.center{
+	width:70%;
+	height: 70%;
+	position: absolute;
+	top: 15%;
+	left: 15%;
+	
+
+}
+
+#title-main {
+	background-color: none;
+	vertical-align: center;
+
+	
+	
+}
+
+
+.letter{
+	color: white;
+	float:left;
+	
+	margin:0;
+	padding:0;
+	height:100%;
+
+	font-size: 35vh;
+	transition: all 1s ease-in-out;
+	align-items: center;
+	cursor: default;
+}
+
+.letter:hover {
+	transform: scale(1.1, 1.1);
+
+}
+
+.letter:hover .dropdown {
+
+
+	
+	
+}
+.letter:hover #first {
+	transform: translate(0,0);
+
+}
+
+.letter:hover #second {
+	transform: translate(0,5vh);
+
+	
+
+}
+.letter:hover #third {
+	transform: translate(0,10vh);
+
+	
+
+}
+.letter:hover #fourth {
+	transform: translate(0,15vh);
+	
+
+	
+
+}
+
+#first {
+
+
+
+}
+
+#second {
+
+	
+	
+}
+#third {
+
+	
+	
+}
+#fourth {
+
+	
+	
+}
+.dropdown {
+	font-size: 10px; 
+	position: absolute;
+	top:35vh;
+	transition: all 1s ease-in-out;
+	opacity: 0;
+}
+.dropdown:hover {
+	text-decoration: underline;
+
+	cursor: pointer;
+	margin-left:10px;
+
+}
+.img {
+	position: absolute;
+
+}
+
+	
+	
