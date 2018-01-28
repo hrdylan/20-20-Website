@@ -143,15 +143,21 @@ function init(){
 	var photo = document.getElementById("photo"); 
 	photo.addEventListener("click", toPhoto);
 
+	/*animation to schedule page*/
+	var photo = document.getElementById("schedule"); 
+	photo.addEventListener("click", toSchedule);
+
 	function toAbout() {
+		leaveHome();
+	}
 
-
-		/*move title animations*/
+	function leaveHome() {
+		/*move main title*/
 		var center = document.getElementById("title-main");
 		var elements = center.querySelectorAll(".letter");
 		var dist = -300;
 		for (var i = 0; i < elements.length; i++) {
-			elements[i].style.transform= "translate(" + dist + "vw)";
+			elements[i].style.transform= "translate(0," + dist + "vh)";
 			dist +=50;
 		}
 
@@ -161,7 +167,6 @@ function init(){
 			var randX = getRandomArbitrary(-200, -100);
 			imgHandler[i][0].style.transform = "translate(" + randX + "vw," + " 0)";
 		}
-
 		/*create back arrow*/
 		var arrow = document.createElement('img');
 		document.body.appendChild(arrow);
@@ -174,11 +179,6 @@ function init(){
 		arrow.style.opacity = 1;
 
 		currPageElements.push(arrow);
-
-
-
-
-		
 
 	}
 
@@ -267,35 +267,9 @@ function init(){
 			}, 10);
 		}
 
+		leaveHome();
 
-		
-		/*move main title*/
-		var center = document.getElementById("title-main");
-		var elements = center.querySelectorAll(".letter");
-		var dist = -300;
-		for (var i = 0; i < elements.length; i++) {
-			elements[i].style.transform= "translate(0," + dist + "vh)";
-			dist +=50;
-		}
 
-		/*move and shut down music notes animations*/
-		DRAWING = false;
-		for (var i = 0; i < imgHandler.length; i++) {
-			var randX = getRandomArbitrary(-200, -100);
-			imgHandler[i][0].style.transform = "translate(" + randX + "vw," + " 0)";
-		}
-		/*create back arrow*/
-		var arrow = document.createElement('img');
-		document.body.appendChild(arrow);
-		arrow.addEventListener('click',returnToHome)
-		arrow.setAttribute('src', "arrow-right_white.png");
-		arrow.style.position = "absolute";
-		arrow.style.top = "2vh";
-		arrow.style.left =  "0";
-		arrow.style.width ="7vw";
-		arrow.style.opacity = 1;
-
-		currPageElements.push(arrow);
 		
 		/*create letters*/
 		var letters = new Array(7);
@@ -319,9 +293,16 @@ function init(){
 				letters[i].style.top = "20.5vh";
 
 			}
-			sr.reveal(".photoLetter");
+			
 
 			}, 300);
+
+		/*use scrollReveal to style the title AFTER it moves into position*/
+		var moveGalleryTitle = setTimeout(function(){
+			sr.reveal(".photoLetter");
+
+			}, 3000);
+
 
 
 		/*create and load photos onto DOM*/
@@ -346,6 +327,10 @@ function init(){
 		
 
 
+	}
+
+	function toSchedule(){
+		leaveHome();
 	}
 	
 	
