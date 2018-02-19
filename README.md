@@ -25,7 +25,7 @@
   Links to 3rd part sites are live (FB, Youtube, ect).
   
 # Third Party Libraries:
-  This repository uses the Scroll.js
+  This repository uses the ScrollReveal.js
   
   # Liscence
     The MIT License
