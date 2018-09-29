@@ -12,7 +12,7 @@
   file to the directory. Open the html document with Google Chrome to view.
  
 # Notes on the implementation:
-  Although the website is multi-page, only one html document is used. Instead, off linking multiple pages view <a>
+  Although the website is multi-page, only one html document is used. Instead of linking multiple pages via <a>
   elements, the site uses javascript to dynamically create each page's content as needed. This decreases the number 
   of files the site requires. At a high level, the html and css documents provide the base elements and style for
   the home page. From there Main.js specifies how to alter the content to shift from page to page. A typical shift
@@ -27,7 +27,7 @@
 # Third Party Libraries:
   This repository uses ScrollReveal.js.
   
-  # Liscence
+# Liscence
     The MIT License
 
     Copyright 2016 Julian Lloyd
