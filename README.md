@@ -5,7 +5,7 @@
   This repository contains the source files for my bands webpage. The idea behind the site is to  provide
   a place where the group can consolidate its internet presence currently spread between Facebook, Instagram,
   and Youtube. The site will host video, image, and informational content. It is currently under local
-  development and not yet hosted online.
+  development and not yet hosted online. I also saw this project as a way to start learning JS, HTML, and CSS.
   
 # Downloading and Viewing the Project:
   Clone the repository or download its contents into the same directory.  Open 2020.html with Chrome or Safari 
