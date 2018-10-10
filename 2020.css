@@ -1,0 +1,167 @@
+body,html{
+	width:100%;
+	height: 100%;
+	background-color: rgb(128,0,0);
+	font-family: 'Libre Franklin', sans-serif;
+
+
+}
+a {
+	color:white;
+	margin: 0;
+	padding: 0;
+}
+
+
+.center{
+	width:70vw;
+	height:70vh;
+	position: absolute;
+	top: 15vh;
+	left: 15vw;
+
+	align-items: center;
+	
+
+}
+
+#title-main {
+	background-color: none;
+
+	
+	
+}
+
+
+.letter{
+	color: white;
+	float:left;
+	
+	margin:0;
+	padding:0;
+	height:100%;
+
+	font-size: 35vh;
+	transition: all 1s ease-in-out;
+	align-items: center;
+	cursor: default;
+}
+
+.letter:hover {
+	transform: scale(1.1, 1.1);
+
+}
+
+.letter:hover .dropdown {
+
+
+	
+	
+}
+.letter:hover #first {
+	transform: translate(0,0);
+
+}
+
+.letter:hover #second {
+	transform: translate(0,5vh);
+
+	
+
+}
+.letter:hover #third {
+	transform: translate(0,10vh);
+
+	
+
+}
+.letter:hover #schedule{
+	transform: translate(0,15vh);
+	
+
+	
+
+}
+
+#first {
+
+
+
+}
+
+#second {
+
+	
+	
+}
+#third {
+
+	
+	
+}
+#fourth {
+
+	
+	
+}
+.dropdown {
+	font-size: 10px; 
+	position: absolute;
+	top:35vh;
+	transition: all 1s ease-in-out;
+	opacity: 0;
+	left:1vw;
+
+}
+.dropdown:hover {
+	text-decoration: underline;
+
+	cursor: pointer;
+	margin-left:10px;
+
+}
+.img {
+	position: absolute;
+	
+	transition: transform 2s ease-in-out;
+	
+
+}
+
+.photoLetter {
+	position: absolute;
+	transition: all 2s ease-in-out;
+	font-size: 20vw;
+	color:white;
+	left: 0vw;
+	
+}
+
+.galleryPhoto {
+	width: 45vw;
+	float: left;
+	margin:0;
+	padding: 0;
+	position: relative;
+	top: 100vh;
+
+}
+
+.calendarTile {
+	height: 30vh;
+	width: 100vw;
+	margin: 1vw;
+
+	float: left;
+	background-color: white;
+}
+
+
+
+
+
+
+
+
+	
+	
