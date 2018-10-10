@@ -136,28 +136,40 @@ function init(){
 
 	/* create listeners for animation to "about" page*/
 	var about = document.getElementById("about"); 
-	about.addEventListener("click", toAbout);
+	about.addEventListener("click", function(){toAbout("left");});
 
 
 	/*animations to and from photo page*/
 	var photo = document.getElementById("photo"); 
-	photo.addEventListener("click", toPhoto);
+	photo.addEventListener("click", function(){toPhoto("left");});
 
 	/*animation to schedule page*/
 	var photo = document.getElementById("schedule"); 
-	photo.addEventListener("click", toSchedule);
+	photo.addEventListener("click", function(){toSchedule("up");});
 
-	function toAbout() {
-		leaveHome();
+	function toAbout(direction) {
+		leaveHome(direction);
 	}
 
-	function leaveHome() {
+	function leaveHome(direction) {
 		/*move main title*/
 		var center = document.getElementById("title-main");
 		var elements = center.querySelectorAll(".letter");
 		var dist = -300;
+		var directionTable = new Array(2);
+
+		if (direction == "right"){
+			dist *= -1;
+		}
+		if (direction == "left" || direction == "right"){
+			directionTable[0] = "translate(";
+			directionTable[1] = "vw,0)";
+		} else {
+			directionTable[0] = "translate(0,";
+			directionTable[1] = "vh)";
+		}
 		for (var i = 0; i < elements.length; i++) {
-			elements[i].style.transform= "translate(0," + dist + "vh)";
+			elements[i].style.transform= directionTable[0] + dist + directionTable[1];
 			dist +=50;
 		}
 
@@ -248,7 +260,7 @@ function init(){
 		}
 
 
-	function toPhoto() {
+	function toPhoto(direction) {
 
 		function changeBackGroundColor(){
 			var r = 128;
@@ -267,10 +279,9 @@ function init(){
 			}, 10);
 		}
 
-		leaveHome();
+		leaveHome(direction);
 
 
-		
 		/*create letters*/
 		var letters = new Array(7);
 		var gallery_chars = ["G", "A", "L", "L", "E", "R", "Y"];
@@ -304,7 +315,6 @@ function init(){
 			}, 3000);
 
 
-
 		/*create and load photos onto DOM*/
 		for (var i = 0; i < 12; i++) {
 			photo = document.createElement('img');
@@ -316,21 +326,28 @@ function init(){
 			photo.className = "galleryPhoto";
 
 		} 
+
 		sr.reveal('.galleryPhoto');
 		/*change global page color to black*/
 		pageColor = "black";
 		/*use function to change color*/
 		changeBackGroundColor();
 
-		
-		
-		
-
-
 	}
 
-	function toSchedule(){
-		leaveHome();
+	function toSchedule(direction){
+		leaveHome(direction);
+		var numDays = 30;
+		var infoStr = "";
+		/*create calendar tiles*/
+		for (var i = 0; i < numDays; i++) {
+			elem = document.createElement('div');
+			elem.className = 'calendarTile';
+			elem.innerHTML =  i + 1 + " ";
+			document.body.appendChild(elem);
+			currPageElements.push(elem);
+			sr.reveal(elem);
+		}
 	}
 	
 	
