@@ -8,8 +8,8 @@
   development and not yet hosted online.
   
 # Downloading and Viewing the Project:
-  Download the "Main" .html .css and .js files and put in the same directory, add the files from the image assests
-  file to the directory. Open the html document with Google Chrome to view.
+  Clone the repository or download its contents into the same directory.  Open 2020.html with Chrome or Safari 
+  to view project.
  
 # Notes on the implementation:
   Although the website is multi-page, only one html document is used. Instead of linking multiple pages via <a>
@@ -21,8 +21,8 @@
   function creates the neccesary elements and styles them. 
 
 # Status of the Project:
-  The home and gallery pages (with place holder photots) are finished. The schedule page is currently in progress.
-  Links to 3rd part sites are live (FB, Youtube, ect).
+  The home page and photo page (with place holder images) are finished. The schedule page and about pages are currently in progress.
+  Links to 3rd part sites are not yet implemented (FB, Youtube, ect).
   
 # Third Party Libraries:
   This repository uses ScrollReveal.js.
